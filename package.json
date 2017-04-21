@@ -1,0 +1,50 @@
+{
+  "name": "react-dom-elements",
+  "version": "0.0.0",
+  "description": "Get DOM elements from ReactDOMFactories",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf lib/*",
+    "lint": "eslint src",
+    "prebuild": "npm run clean && npm run lint",
+    "build": "babel src --out-dir lib --ignore tests",
+    "postbuild": "flow-copy-source src lib",
+    "flow:typed": "flow-typed install",
+    "flow:stub": "flow-typed create-stub",
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags && npm publish"
+  },
+  "files": [
+    "src",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lttb/react-dom-elements.git"
+  },
+  "author": "lttb <kenzhaev.artur@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lttb/react-dom-elements/issues"
+  },
+  "homepage": "https://github.com/lttb/react-dom-elements#readme",
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "devDependencies": {
+    "@lttb/eslint-config-default": "github:lttb/configs#js",
+    "react": "^15.5.4",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "eslint": "^3.13.0",
+    "flow-bin": "^0.44.2",
+    "flow-copy-source": "^1.1.0",
+    "flow-typed": "^2.0.0"
+  },
+  "keywords": [
+    "react",
+    "prop"
+  ]
+}

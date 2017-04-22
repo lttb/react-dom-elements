@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/lttb/react-dom-elements#readme",
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^0.14.0 || ^15.0.0-0"
   },
   "devDependencies": {
     "@lttb/eslint-config-default": "github:lttb/configs#js",
